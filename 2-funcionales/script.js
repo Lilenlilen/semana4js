@@ -40,6 +40,14 @@ const puntuaciones = [
   },
 ];
 
+// const puntosTotales = puntuaciones[{ puntos }].reduce(
+//   (previusValue, puntos) => {
+//     return previusValue + puntos;
+//   },
+//   0
+// );
+// console.log(puntosTotales);
+
 const equiposConPuntosTotales = puntuaciones.map((equipo) => {
   const puntosTotales = equipo.puntos.reduce((previusValue, punto) => {
     return previusValue + punto;
@@ -48,6 +56,10 @@ const equiposConPuntosTotales = puntuaciones.map((equipo) => {
 });
 
 console.log(equiposConPuntosTotales);
+
+console.log(Math.max(equiposConPuntosTotales.puntos));
+
+console.log(Math.min(equiposConPuntosTotales.puntos));
 
 const ordenados = equiposConPuntosTotales[puntos].sort((a, b) => {
   return a - b;
